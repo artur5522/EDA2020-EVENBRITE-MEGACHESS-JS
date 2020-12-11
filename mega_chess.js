@@ -959,17 +959,17 @@ const elijeMejorMovida = (mov1, mov2, tablero, color) => {
         mov2 = [];
         mov2 = [...mov1];
       } 
-    } 
-    mov1 = mueveCaballo(tablero, color);
-    if (mov1[4] > mov2[4]) {
-      mov2 = [];
-      mov2 = [...mov1];
     }    
     mov1 = mueveTorre(tablero, color);
     if (mov1[4] > mov2[4]) {
       mov2 = [];
       mov2 = [...mov1];
     }
+    mov1 = mueveCaballo(tablero, color);
+    if (mov1[4] > mov2[4]) {
+      mov2 = [];
+      mov2 = [...mov1];
+    }   
     mov1 = mueveReina(tablero, color);
     if (mov1[4] > mov2[4]) {
       mov2 = [];
@@ -1053,16 +1053,7 @@ ws.onmessage = (e) => {
        },
      };
      ws.send(JSON.stringify(obj2));
-   } 
-  if (msg.event == "abort") {
-    const obj = {
-      action: "abort",
-      data: {
-        Board_id: "2d348323-2e79-4961-ac36-1b000e8c42a5",
-      }
-    } 
-    ws.send(JSON.stringify(obj));
-  } 
+   }   
   if (msg.event == "your_turn") {
     c.log(msg.data);
     c.log(rellenaTablero(msg));
