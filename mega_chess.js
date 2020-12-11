@@ -1045,15 +1045,15 @@ ws.onmessage = (e) => {
     console.log("usuarios actualizados");
     console.log(msg.data.users_list);
   }
-  // if (msg.event == "ask_challenge") {
-  //   const obj2 = {
-  //     action: "accept_challenge",
-  //     data: {
-  //       board_id: msg.data.board_id,
-  //     },
-  //   };
-  //   ws.send(JSON.stringify(obj2));
-  // } 
+   if (msg.event == "ask_challenge") {
+     const obj2 = {
+       action: "accept_challenge",
+       data: {
+         board_id: msg.data.board_id,
+       },
+     };
+     ws.send(JSON.stringify(obj2));
+   } 
   if (msg.event == "abort") {
     const obj = {
       action: "abort",
