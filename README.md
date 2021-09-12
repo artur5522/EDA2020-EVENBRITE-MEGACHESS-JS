@@ -1,5 +1,5 @@
 # EDA2020-EVENTBRITE-MEGACHESS-JS
-Bot que juega al ajedrez. Sirve perfectamente para ajedrez común, con algunas modificaciones mínimas
-Pero este, en particular, es con reglas especiales.
-No está hecho para que corra en node, sino en el navegador. 
-Se conecta a través de un servidor a traves de un websocket. Dicho servidor es quien valida que los movimientos sean válidos.
+Special Chess player bot. It was a competition/tournament/filter for a job application.
+It is a special chess with different rules, specialy designed and moddified by the company EventBrite -> www.eventbrite.com.ar.
+It connects whit the server through a web socket, who validates the moves. And there for, decide if the move is right or wronge.
+The player with more points at the end wins the match.
